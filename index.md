@@ -3,166 +3,133 @@ title: "Hayk Karapetyan | Senior Full-Stack Engineer & DevOps"
 description: "Full-Stack Development · DevOps · AI Integrations · Microservices · High-Load Systems"
 ---
 
-<div align="center">
-
-# 👋 Hi, I'm **Hayk Karapetyan**
-
-### **Senior Full-Stack Developer · DevOps Engineer · AI Integrator**
-
-[![GitHub](https://img.shields.io/badge/GitHub-haykkarapetyan-black?logo=github)](https://github.com/haykkarapetyan)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/haykkarapetyan)
-[![Upwork](https://img.shields.io/badge/Upwork-View%20Profile-6fda44?logo=upwork)](https://www.upwork.com/freelancers/~01c08523c9e9243bc7)
-
-</div>
+<p align="center">
+  <a href="https://github.com/haykkarapetyan">
+    <img src="https://img.shields.io/badge/GitHub-haykkarapetyan-black?logo=github" alt="GitHub" />
+  </a>
+  <a href="https://www.linkedin.com/in/haykkarapetyan">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin" alt="LinkedIn" />
+  </a>
+  <a href="https://www.upwork.com/freelancers/~01c08523c9e9243bc7">
+    <img src="https://img.shields.io/badge/Upwork-View%20Profile-6fda44?logo=upwork" alt="Upwork" />
+  </a>
+</p>
 
 ---
 
 ## 🚀 About Me
 
-I'm a **Senior Full-Stack Engineer (12+ years)** with deep experience in backend systems, modern frontends, DevOps, microservices, and AI-powered automation.
+I’m a **Senior Full-Stack Engineer (12+ years)** with deep experience in backend systems, modern frontends, DevOps, microservices, and AI-powered automation.
 
-My work spans **high-load platforms**, **SaaS products**, **ATS systems**, **AI assistants**, and **complex cloud/metal infrastructures**.
+My work spans **high-load platforms, SaaS products, ATS systems, AI assistants, and complex cloud/metal infrastructures**.
 
-- 💼 Built & scaled **job platforms, ATS systems, and price optimization engines**  
-- 🧠 Strong in **AI integrations** (OpenAI, Gemini, NLP, vectors, embeddings)  
-- ☁️ Cloud + DevOps on **AWS, OVH Metal, Docker, Kubernetes, GitHub Actions**  
-- ⚙️ Expert in **PHP (Yii2, Laravel), Node.js, React/Next.js, MariaDB, OpenSearch**  
-- 🧩 Designing scalable microservice architectures with API gateways and queues  
+- 🧳 Built & scaled **job platforms, ATS systems, and price optimization engines**
+- 🧠 Strong in **AI integrations** (OpenAI, Gemini, NLP, vectors, embeddings)
+- ☁️ Cloud + DevOps on **AWS, OVH Metal, Docker, Kubernetes, GitHub Actions**
+- 🧩 Expert in **PHP (Yii2, Laravel), Node.js, React/Next.js, MariaDB, OpenSearch**
+- ⚙️ Designing **microservice architectures** with gateways, queues, and observability
 
 ---
 
 ## 🛠 Tech Stack
 
-### **Languages**
-PHP 7/8, JavaScript, TypeScript, Node.js, Python  
-SQL (MariaDB, MySQL, PostgreSQL), Redis, OpenSearch
+### Languages
+PHP 7/8 · JavaScript · TypeScript · Node.js · Python  
+SQL (MariaDB, MySQL, PostgreSQL) · Redis · OpenSearch
 
-### **Backend**
-Yii2, Laravel, Express, Fastify, REST APIs, GraphQL, WebSockets, gRPC
+### Backend
+Yii2 · Laravel · Express · Fastify  
+REST APIs · GraphQL · WebSockets · gRPC · Microservices
 
-### **Frontend**
-React, Next.js, Tailwind CSS, SSR, SEO-ready architectures
+### Frontend
+React · Next.js · Tailwind CSS  
+SPA/SSR · SEO-friendly architectures
 
-### **DevOps & Infrastructure**
-Docker, Kubernetes, GitHub Actions, Bitbucket Pipelines, Jenkins  
-AWS (EC2, RDS, S3, CloudFront, ALB), OVH Metal, Nginx, Certbot
+### DevOps & Infra
+Docker · Docker Compose · Kubernetes  
+GitHub Actions · Bitbucket Pipelines · Jenkins  
+AWS (EC2, RDS, S3, CloudFront, ALB) · OVH Metal · Nginx · Certbot
 
-### **Search, Data, AI**
-OpenSearch (KNN Vector Search), Elasticsearch  
-Redis Queues, AI Assistants, NLP, embeddings  
-Supabase Self-Hosted, Edge Functions, Kong API Gateway
+### Search, Data & AI
+OpenSearch / Elasticsearch (KNN, vectors)  
+Redis queues, background workers  
+AI Assistants, embeddings, CV/Job matching
 
 ---
 
-# 💼 Highlighted Projects
+## 💼 Highlighted Projects
 
-## 📌 1) **Price Optimization & Monitoring Platform**
-A full system to track product prices, detect competitor changes, and recommend optimal pricing using:
+### 📌 Price Optimization & Monitoring Platform
 
-- Automated price scraping and monitoring
-- AI-assisted recommendation logic
-- Real-time alerts + dashboards
-- Microservices communicating via message queues
+- Tracks product prices and competitor changes
+- AI-assisted suggestions for **optimal prices**
+- Real-time alerts and monitoring dashboards
+- Microservices communicating via queues
 
 **Tech:** Node.js, Python, MariaDB, Redis, Docker, OpenAI API
 
 ---
 
-## 📌 2) **AI Interview Bot & CV Scoring System**
-End-to-end AI solution that:
+### 📌 AI Interview Bot & CV Scoring System
 
-- Reads and analyzes candidate CVs  
-- Reads job descriptions  
-- Generates **personalized interview questions**  
-- Performs voice interactions  
-- Scores candidate responses  
-- Creates a final analytics report
+- Parses and analyzes **candidate CVs** and **job descriptions**
+- Generates **personalized interview questions**
+- Voice-based Q&A (STT + TTS)
+- Scores candidates and produces **final analytics**
 
 **Tech:** Python, Node.js, OpenAI Assistants API, Whisper, TTS, Docker
 
 ---
 
-## 📌 3) **Hiring Platforms & ATS Systems (Staff.am / Hirebee)**
-Led back-end + front-end + DevOps engineering on large-scale platforms:
+### 📌 Hiring Platforms & ATS (Staff.am / Hirebee)
 
-- Fully redesigned infrastructure from AWS → OVH Metal  
-- Implemented **vector search** for job–candidate matching  
-- Built **blue/green deployments** for zero-downtime releases  
-- Created centralized monitoring: logs, metrics, DB replication dashboards  
-- Introduced auto-scaling, caching layers, and query optimizations  
+- Large-scale **job & hiring platforms**
+- AWS → OVH Metal migration (cost-optimized, highly available)
+- **Vector search** for job–candidate matching using OpenSearch
+- Blue/green deployments, centralized logs/metrics, replication dashboards
 
-**Tech:** Yii2, PHP 8, React, Next.js, MariaDB, OpenSearch, Redis, Docker, Nginx
+**Tech:** Yii2, PHP 8, React/Next.js, MariaDB, OpenSearch, Redis, Docker, Nginx
 
 ---
 
-## 📌 4) **Search & Recommendation Engine**
-Developed modern AI-powered search using:
+### 📌 Search & Recommendation Engine
 
-- **OpenSearch KNN vector embeddings**  
-- Multilingual job and CV embedding generation  
-- Similarity search with cosine metrics  
-- Ranking, boosting, and re-scoring logic  
+- OpenSearch **KNN vector search** for jobs and CVs
+- Multilingual embeddings and relevance scoring
+- Ranking, boosting, and business-rule tuning
 
 **Tech:** OpenSearch 2.x, FAISS, Docker, Node.js, Python
 
 ---
 
-## 📌 5) **Microservices Platform + API Gateway + CI/CD**
-Architected a microservices environment with:
+## 🧪 Other Things I Play With
 
-- gRPC + REST communication  
-- Kong API Gateway  
-- GitHub Actions runners on metal servers  
-- Automated Docker build → test → deploy pipelines  
-- Centralized secrets and config management  
-
-**Tech:** Go, Node.js, Yii2, Docker, Kubernetes, GitHub Actions, OVH Metal
+- Self-hosted **Supabase** + Kong API Gateway  
+- Travel / side apps with **Next.js + AI features**  
+- Website uptime monitor (status codes, content checks, alerts)  
+- Self-hosted **GitHub Actions** runners on metal servers  
 
 ---
 
-# 🧪 Additional Projects
+## 📚 Open Source & Code
 
-### 🔹 Travel Planner App  
-AI-driven trip suggestions, maps, visited country tracking, image uploads.
+I like to share:
 
-### 🔹 Website Uptime Monitoring Tool  
-Checks status codes, keywords, content match, downtime notifications.
+- DevOps & Docker templates  
+- Full-stack Yii2 + React / Next.js setups  
+- AI utilities and interview tools  
+- Supabase and infrastructure configs  
 
-### 🔹 Internal Admin Dashboard  
-Real-time charts, user journey analytics, recruitment funnels, OpenSearch dashboards.
-
----
-
-# 📚 Open Source & Code Samples
-I share code for:
-
-- Docker & DevOps templates  
-- React/Next.js starter kits  
-- Yii2 components  
-- AI + automation scripts  
-- Supabase self-hosted configurations  
-
-👉 Explore here: **[github.com/haykkarapetyan](https://github.com/haykkarapetyan)**
+👉 Browse my repos: **[github.com/haykkarapetyan](https://github.com/haykkarapetyan)**
 
 ---
 
-# 🧑‍💼 What I Can Help You With
-
-- Build full SaaS / startup MVP from zero  
-- Optimize pricing, search, and recommendations  
-- Move infrastructure from AWS → self-hosted metal  
-- Build AI assistants and internal automation tools  
-- Set up CI/CD, monitoring, and observability  
-- Refactor monoliths into microservices  
-
----
-
-# 📬 Contact Me
+## 📬 Contact
 
 - 💼 Upwork: **[View my Profile](https://www.upwork.com/freelancers/~01c08523c9e9243bc7)**  
 - 🔗 LinkedIn: **[Connect with me](https://www.linkedin.com/in/haykkarapetyan)**  
 - 💻 GitHub: **[@haykkarapetyan](https://github.com/haykkarapetyan)**  
 
-<div align="center">
-  Made with ❤️ on <strong>GitHub Pages</strong>
-</div>
+<p align="center">
+  <em>Made with ❤️ on GitHub Pages</em>
+</p>
