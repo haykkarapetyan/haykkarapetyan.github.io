@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hayk Karapetyan — Senior Full-Stack Engineer & DevOps</title>
+<meta name="description" content="Senior Full-Stack Engineer with 12+ years of experience in backend, frontend, DevOps, microservices, and AI integrations." />
+<meta name="author" content="Hayk Karapetyan" />
+<meta name="theme-color" content="#0b0d10" />
+
+<meta property="og:title" content="Hayk Karapetyan — Senior Full-Stack Engineer & DevOps" />
+<meta property="og:description" content="Full-Stack · DevOps · AI Integrations · Microservices · High-Load Systems" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://haykkarapetyan.github.io/" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #0b0d10;
+    --bg-soft: #12161b;
+    --bg-card: #151a21;
+    --border: #1f262f;
+    --text: #e6e9ef;
+    --text-muted: #9aa4b2;
+    --accent: #6ee7b7;
+    --accent-2: #60a5fa;
+    --accent-glow: rgba(110, 231, 183, 0.15);
+    --radius: 14px;
+    --maxw: 1080px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: var(--accent); text-decoration: none; transition: color .15s ease; }
+  a:hover { color: var(--accent-2); }
+
+  code, .mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; }
+
+  .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(10px);
+    background: rgba(11, 13, 16, 0.75);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .container {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .brand {
+    font-weight: 700; font-size: 15px; letter-spacing: .2px;
+    color: var(--text);
+  }
+  .brand .dot { color: var(--accent); }
+  .nav-links { display: flex; gap: 24px; }
+  .nav-links a {
+    color: var(--text-muted); font-size: 14px; font-weight: 500;
+  }
+  .nav-links a:hover { color: var(--text); }
+
+  /* Hero */
+  .hero { padding: 96px 0 72px; position: relative; overflow: hidden; }
+  .hero::before {
+    content: ""; position: absolute; top: -200px; left: 50%;
+    width: 600px; height: 600px; transform: translateX(-50%);
+    background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; text-align: center; }
+  .eyebrow {
+    display: inline-block; padding: 6px 14px; border-radius: 999px;
+    background: var(--bg-card); border: 1px solid var(--border);
+    color: var(--text-muted); font-size: 13px; font-weight: 500;
+    margin-bottom: 24px;
+  }
+  .eyebrow .pulse {
+    display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent); margin-right: 8px; vertical-align: middle;
+    box-shadow: 0 0 10px var(--accent);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  h1 {
+    font-size: clamp(36px, 6vw, 60px);
+    font-weight: 800; line-height: 1.05; margin: 0 0 20px;
+    letter-spacing: -0.02em;
+  }
+  h1 .gradient {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero p.lead {
+    font-size: 18px; color: var(--text-muted);
+    max-width: 620px; margin: 0 auto 32px;
+  }
+  .cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 10px;
+    font-weight: 600; font-size: 14px;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .cta.primary {
+    background: var(--accent); color: #0b0d10;
+  }
+  .cta.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 30px -10px var(--accent);
+    color: #0b0d10;
+  }
+  .cta.ghost {
+    background: transparent; border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .cta.ghost:hover { border-color: var(--accent); color: var(--accent); }
+  .cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* Sections */
+  section { padding: 72px 0; border-top: 1px solid var(--border); }
+  section h2 {
+    font-size: 28px; font-weight: 700; letter-spacing: -0.01em;
+    margin: 0 0 8px;
+  }
+  section h2 .num {
+    color: var(--accent); font-family: 'JetBrains Mono', monospace;
+    font-size: 16px; font-weight: 500; margin-right: 10px;
+  }
+  .section-sub { color: var(--text-muted); margin: 0 0 32px; font-size: 15px; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+  .about-grid p { color: var(--text-muted); font-size: 16px; margin: 0 0 16px; }
+  .about-grid p strong { color: var(--text); font-weight: 600; }
+  .highlight-list {
+    list-style: none; padding: 0; margin: 24px 0 0;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+  }
+  .highlight-list li {
+    padding: 14px 18px; border-radius: var(--radius);
+    background: var(--bg-card); border: 1px solid var(--border);
+    font-size: 14px; color: var(--text-muted);
+  }
+  .highlight-list li strong { color: var(--text); font-weight: 600; }
+
+  /* Tech */
+  .tech-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+  .tech-card {
+    padding: 22px; border-radius: var(--radius);
+    background: var(--bg-card); border: 1px solid var(--border);
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .tech-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .tech-card h3 {
+    font-size: 14px; font-weight: 600; margin: 0 0 14px;
+    color: var(--accent); letter-spacing: .03em; text-transform: uppercase;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    display: inline-block; padding: 4px 10px; border-radius: 6px;
+    background: var(--bg-soft); border: 1px solid var(--border);
+    font-size: 12px; font-weight: 500; color: var(--text);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  /* Projects */
+  .project-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+  .project {
+    padding: 26px; border-radius: var(--radius);
+    background: var(--bg-card); border: 1px solid var(--border);
+    transition: border-color .15s ease, transform .15s ease;
+  }
+  .project:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .project-head {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 16px; margin-bottom: 12px; flex-wrap: wrap;
+  }
+  .project h3 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+  .project-role {
+    font-size: 12px; color: var(--accent); font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .project ul {
+    margin: 12px 0; padding-left: 18px; color: var(--text-muted);
+    font-size: 15px;
+  }
+  .project ul li { margin-bottom: 6px; }
+  .project .stack {
+    display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px;
+    padding-top: 14px; border-top: 1px solid var(--border);
+  }
+
+  /* Contact */
+  .contact { text-align: center; }
+  .contact p { color: var(--text-muted); max-width: 520px; margin: 0 auto 28px; }
+  .contact-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* Footer */
+  footer {
+    padding: 32px 0; border-top: 1px solid var(--border);
+    text-align: center; color: var(--text-muted); font-size: 13px;
+  }
+
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .hero { padding: 64px 0 48px; }
+    section { padding: 56px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="brand">hayk<span class="dot">.</span>dev</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#stack">Stack</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container hero-inner">
+    <span class="eyebrow"><span class="pulse"></span>Available for new projects</span>
+    <h1>Hayk Karapetyan<br /><span class="gradient">Senior Full-Stack Engineer</span></h1>
+    <p class="lead">
+      12+ years building high-load systems, AI-powered platforms, and scalable microservices.
+      Backend, frontend, DevOps — end-to-end.
+    </p>
+    <div class="cta-row">
+      <a class="cta primary" href="#contact">Get in touch</a>
+      <a class="cta ghost" href="https://github.com/haykkarapetyan" target="_blank" rel="noopener">View GitHub →</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <h2><span class="num">01 /</span>About</h2>
+    <p class="section-sub">A quick snapshot of what I do.</p>
+    <div class="about-grid">
+      <p>
+        I'm a <strong>Senior Full-Stack Engineer</strong> specializing in backend development,
+        modern frontend applications, DevOps infrastructure, and AI automation. My work spans
+        <strong>price optimization engines</strong>, <strong>form builder platforms</strong>,
+        <strong>AI-powered tools</strong>, and <strong>microservice architectures</strong> running
+        in production under real load.
+      </p>
+      <ul class="highlight-list">
+        <li><strong>AI integrations</strong> — OpenAI, Gemini, embeddings, NLP</li>
+        <li><strong>Polyglot backend</strong> — PHP, Node.js, Python</li>
+        <li><strong>DevOps</strong> — AWS, OVH Metal, Docker, Kubernetes</li>
+        <li><strong>Microservices</strong> — queues, gateways, observability</li>
+        <li><strong>Data</strong> — MariaDB, PostgreSQL, Redis, OpenSearch</li>
+        <li><strong>Frontend</strong> — React, Next.js, Tailwind, TypeScript</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="container">
+    <h2><span class="num">02 /</span>Tech Stack</h2>
+    <p class="section-sub">Tools I reach for every day.</p>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <h3>Languages & Data</h3>
+        <div class="tags">
+          <span class="tag">PHP 7/8</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Python</span>
+          <span class="tag">MariaDB</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">Redis</span>
+          <span class="tag">OpenSearch</span>
+        </div>
+      </div>
+      <div class="tech-card">
+        <h3>Backend</h3>
+        <div class="tags">
+          <span class="tag">Yii2</span>
+          <span class="tag">Laravel</span>
+          <span class="tag">Express</span>
+          <span class="tag">Fastify</span>
+          <span class="tag">REST</span>
+          <span class="tag">gRPC</span>
+          <span class="tag">WebSockets</span>
+          <span class="tag">Microservices</span>
+        </div>
+      </div>
+      <div class="tech-card">
+        <h3>Frontend</h3>
+        <div class="tags">
+          <span class="tag">React</span>
+          <span class="tag">Next.js</span>
+          <span class="tag">Tailwind</span>
+          <span class="tag">Widget Systems</span>
+          <span class="tag">Dynamic UI</span>
+        </div>
+      </div>
+      <div class="tech-card">
+        <h3>DevOps & Infra</h3>
+        <div class="tags">
+          <span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span>
+          <span class="tag">GitHub Actions</span>
+          <span class="tag">Jenkins</span>
+          <span class="tag">AWS</span>
+          <span class="tag">OVH Metal</span>
+          <span class="tag">Nginx</span>
+        </div>
+      </div>
+      <div class="tech-card">
+        <h3>Search & AI</h3>
+        <div class="tags">
+          <span class="tag">OpenAI</span>
+          <span class="tag">Gemini</span>
+          <span class="tag">Embeddings</span>
+          <span class="tag">KNN Vectors</span>
+          <span class="tag">Whisper</span>
+          <span class="tag">FAISS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <h2><span class="num">03 /</span>Highlighted Projects</h2>
+    <p class="section-sub">Shipped, scaled, and running in production.</p>
+    <div class="project-grid">
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Jotform — Form Builder Ecosystem</h3>
+          <span class="project-role">Full-Stack</span>
+        </div>
+        <p style="color: var(--text-muted); margin: 0;">Contributed to one of the world's leading online form builder platforms.</p>
+        <ul>
+          <li>Built custom widgets and reusable UI component libraries</li>
+          <li>Developed dynamic form logic — conditions, actions, calculations</li>
+          <li>Improved performance for complex and large forms</li>
+          <li>Worked on embedding options, submission APIs, and real-time updates</li>
+          <li>Strengthened data handling and validation for public forms at scale</li>
+        </ul>
+        <div class="stack">
+          <span class="tag">React</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">REST APIs</span>
+          <span class="tag">Custom UI</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Price Optimization & Monitoring Platform</h3>
+          <span class="project-role">Architect</span>
+        </div>
+        <p style="color: var(--text-muted); margin: 0;">A system that analyzes competitor pricing and recommends optimal product prices.</p>
+        <ul>
+          <li>Automated price scraping and competitor monitoring</li>
+          <li>AI-assisted recommendation engine</li>
+          <li>Real-time dashboards and alerting</li>
+          <li>Microservices communicating through queues</li>
+          <li>Cost-effective, scalable architecture</li>
+        </ul>
+        <div class="stack">
+          <span class="tag">Node.js</span>
+          <span class="tag">Python</span>
+          <span class="tag">MariaDB</span>
+          <span class="tag">Redis</span>
+          <span class="tag">Docker</span>
+          <span class="tag">OpenAI</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>AI Interview Assistant & CV Analyzer</h3>
+          <span class="project-role">AI / Backend</span>
+        </div>
+        <p style="color: var(--text-muted); margin: 0;">A complete AI pipeline for automated candidate screening and interviewing.</p>
+        <ul>
+          <li>Reads and analyzes CVs and job descriptions</li>
+          <li>Generates personalized interview questions</li>
+          <li>Voice interaction with STT + TTS</li>
+          <li>Scores candidate answers with a final analytics summary</li>
+        </ul>
+        <div class="stack">
+          <span class="tag">Python</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">OpenAI Assistants</span>
+          <span class="tag">Whisper</span>
+          <span class="tag">Docker</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Search & Recommendation Engine</h3>
+          <span class="project-role">Search / AI</span>
+        </div>
+        <p style="color: var(--text-muted); margin: 0;">Semantic search and ranking powered by embeddings and KNN.</p>
+        <ul>
+          <li>Semantic search using OpenSearch KNN vectors</li>
+          <li>Multilingual embeddings</li>
+          <li>Ranking &amp; boosting rules</li>
+          <li>Business-logic–aware matching</li>
+        </ul>
+        <div class="stack">
+          <span class="tag">OpenSearch 2.x</span>
+          <span class="tag">FAISS</span>
+          <span class="tag">Python</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Docker</span>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Other Work</h3>
+          <span class="project-role">Various</span>
+        </div>
+        <ul>
+          <li>Self-hosted Supabase + Kong API Gateway</li>
+          <li>Website uptime and status monitoring</li>
+          <li>Travel planner apps with maps + AI suggestions</li>
+          <li>GitHub Actions runners on metal infrastructure</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact">
+    <h2 style="text-align:left;"><span class="num">04 /</span>Contact</h2>
+    <p class="section-sub" style="text-align:left;">Open to freelance, contract, and long-term collaboration.</p>
+    <p>
+      If you're building something interesting — high-load backend, AI integrations, or anything
+      that requires an engineer who handles it end-to-end — let's talk.
+    </p>
+    <div class="contact-links">
+      <a class="cta primary" href="https://www.upwork.com/freelancers/~01c08523c9e9243bc7" target="_blank" rel="noopener">Upwork</a>
+      <a class="cta ghost" href="https://github.com/haykkarapetyan" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Hayk Karapetyan · Built with plain HTML &amp; CSS
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
