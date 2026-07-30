@@ -175,6 +175,8 @@
   .tl-item .node { position: absolute; left: -34px; top: 4px; width: 18px; height: 18px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); box-shadow: 0 0 0 4px rgba(110,231,183,.12); }
   .tl-item h3 { font-size: 1.2rem; margin: 0; }
   .tl-item .meta { font-family: 'JetBrains Mono'; font-size: 12.5px; color: var(--accent-2); margin: 4px 0 10px; }
+  .tl-item .tagline { font-family: 'Sora'; font-weight: 600; font-size: 1.02rem; line-height: 1.35; margin: 0 0 12px; background: linear-gradient(110deg, var(--accent), var(--accent-2) 60%, var(--accent-3)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  @media print { .tl-item .tagline { -webkit-text-fill-color: #0b1220 !important; color: #0b1220; background: none; } }
   .tl-item p { color: var(--text-muted); margin: 0 0 10px; }
   .tl-item ul { margin: 8px 0 0; padding-left: 18px; color: var(--text-muted); }
   .tl-item li { margin-bottom: 5px; }
@@ -369,14 +371,14 @@
         <div class="ico">⌨️</div>
         <h3>Languages &amp; Data</h3>
         <div class="tags">
-          <span class="tag">PHP 7/8</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">MariaDB</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">OpenSearch</span>
+          <span class="tag">Go</span><span class="tag">PHP 7/8</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">MariaDB</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">OpenSearch</span>
         </div>
       </div>
       <div class="skill-card reveal">
         <div class="ico">🔧</div>
         <h3>Backend</h3>
         <div class="tags">
-          <span class="tag">Yii2</span><span class="tag">Laravel</span><span class="tag">Express</span><span class="tag">Fastify</span><span class="tag">REST APIs</span><span class="tag">WebSockets</span><span class="tag">gRPC</span><span class="tag">Microservices</span>
+          <span class="tag">Go</span><span class="tag">Yii2</span><span class="tag">Laravel</span><span class="tag">Express</span><span class="tag">Fastify</span><span class="tag">Supabase</span><span class="tag">REST APIs</span><span class="tag">WebSockets</span><span class="tag">gRPC</span><span class="tag">Microservices</span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -390,7 +392,7 @@
         <div class="ico">🚢</div>
         <h3>DevOps &amp; Cloud</h3>
         <div class="tags">
-          <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">AWS</span><span class="tag">OVH Metal</span><span class="tag">Nginx</span>
+          <span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">Supabase</span><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">AWS</span><span class="tag">OVH Metal</span><span class="tag">Nginx</span>
         </div>
       </div>
       <div class="skill-card reveal">
@@ -434,6 +436,7 @@
         <div class="node"></div>
         <h3>Head of Engineering &amp; Architect — <a href="https://hirebee.ai" target="_blank" rel="noopener">Hirebee</a></h3>
         <div class="meta">AI Recruitment &amp; Hiring Platform · hirebee.ai</div>
+        <div class="tagline">Turning hiring into an AI-native experience — from résumé to offer.</div>
         <p>Building an AI-driven recruitment platform that automates sourcing, screening and interviewing across the hiring funnel.</p>
         <ul>
           <li>AI interview assistant &amp; CV analysis with STT/TTS and answer scoring</li>
@@ -445,6 +448,7 @@
         <div class="node"></div>
         <h3>Head of Engineering &amp; Architect — <a href="https://staff.am" target="_blank" rel="noopener">Staff.am</a></h3>
         <div class="meta">Leading Recruitment &amp; Job Platform · staff.am</div>
+        <div class="tagline">Powering how Armenia hires — at national scale.</div>
         <p>Worked on one of Armenia's leading job and recruitment platforms connecting companies with candidates.</p>
         <ul>
           <li>Developed job-listing, application and employer-facing features</li>
