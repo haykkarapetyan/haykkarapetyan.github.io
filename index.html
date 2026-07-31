@@ -221,8 +221,8 @@
   .cal-scroll { display: inline-block; min-width: 100%; }
   .cal-months { position: relative; height: 15px; margin-bottom: 4px; color: var(--text-dim); font-size: 10.5px; font-family: 'JetBrains Mono'; }
   .cal-months span { position: absolute; top: 0; white-space: nowrap; }
-  .cal { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, 11px); grid-auto-columns: 11px; gap: 3px; }
-  .cal i { width: 11px; height: 11px; border-radius: 2px; background: var(--bg-card-2); }
+  .cal { display: grid; grid-auto-flow: column; grid-template-rows: repeat(7, var(--cs,11px)); grid-auto-columns: var(--cs,11px); gap: 3px; }
+  .cal i { width: var(--cs,11px); height: var(--cs,11px); border-radius: 2px; background: var(--bg-card-2); }
   .cal i.l1 { background: rgba(110,231,183,.28); }
   .cal i.l2 { background: rgba(110,231,183,.48); }
   .cal i.l3 { background: rgba(110,231,183,.72); }
@@ -685,8 +685,8 @@
   (function(){
     var USER = 'haykkarapetyan';
     var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    var CELL = 11, GAP = 3, PITCH = CELL + GAP; // must match .cal CSS
-    var byYear = {}, totals = {};
+    var GAP = 3, MIN_CS = 11, MAX_CS = 16; // px — cell sizing bounds (GAP must match .cal CSS)
+    var byYear = {}, totals = {}, currentYear = null;
 
     var totalEl = document.getElementById('gh-total');
     var yearsEl = document.getElementById('gh-years');
@@ -710,6 +710,7 @@
     }
 
     function renderYear(year){
+      currentYear = year;
       var days = (byYear[year] || []).slice().sort(function(a,b){ return a.date < b.date ? -1 : 1; });
       if(!days.length){ calEl.innerHTML = ''; monthsEl.innerHTML = ''; return; }
 
@@ -719,6 +720,15 @@
       var cells = [];
       for(var p=0;p<pad;p++) cells.push(null);
       days.forEach(function(d){ cells.push(d); });
+
+      // size day-cells so the grid fills the panel width (scrolls on narrow screens)
+      var weeks = Math.ceil(cells.length / 7);
+      var wrap = calEl.closest('.cal-wrap');
+      var avail = (wrap ? wrap.clientWidth : 720) - 2;
+      var cs = Math.floor((avail - (weeks - 1) * GAP) / weeks);
+      cs = Math.max(MIN_CS, Math.min(MAX_CS, cs));
+      var pitch = cs + GAP;
+      calEl.style.setProperty('--cs', cs + 'px');
 
       var calHtml = '', monthHtml = '', lastMonth = -1;
       for(var i=0;i<cells.length;i++){
@@ -732,7 +742,7 @@
         var m = dt.getMonth();
         if(m !== lastMonth && dt.getDate() <= 7){
           var weekIndex = Math.floor(i/7);
-          monthHtml += '<span style="left:'+(weekIndex*PITCH)+'px">'+MONTHS[m]+'</span>';
+          monthHtml += '<span style="left:'+(weekIndex*pitch)+'px">'+MONTHS[m]+'</span>';
           lastMonth = m;
         }
       }
@@ -742,6 +752,13 @@
       var total = totals[year] != null ? totals[year] : days.reduce(function(a,d){ return a + (d.count||0); }, 0);
       totalEl.innerHTML = '<b>' + total.toLocaleString() + '</b> contributions in ' + year;
     }
+
+    // re-fit the grid to the panel width on resize
+    var rzT;
+    window.addEventListener('resize', function(){
+      clearTimeout(rzT);
+      rzT = setTimeout(function(){ if(currentYear) renderYear(currentYear); }, 150);
+    });
 
     function renderTabs(years, active){
       yearsEl.innerHTML = '';
